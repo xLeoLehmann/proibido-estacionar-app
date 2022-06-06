@@ -19,37 +19,46 @@ const styles = StyleSheet.create({
         marginTop: 5,
     },
     buttonContainer: {
-        width: '60%',
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 50,
+		flexDirection: 'column',
+		color: '#FFFFFF'
     },
     button: {
-        backgroundColor: '#0782F9',
+        backgroundColor: '#004AAD',
         width: '90%',
         paddingHorizontal: 100,
         paddingVertical: 15,
         borderRadius: 15,
         alignItems: 'center',
         marginTop: 30,
-        marginBottom: 10
+        marginBottom: 10,
+		color: 'white'
     },
     buttonOutline: {
         backgroundColor: 'white',
         marginTop: 5,
-        borderColor: '#0782F9',
+        borderColor: '#004AAD',
         borderWidth: 2,
+		color: '#FFFFFF'
     },
     buttonText: {
-        color: 'white', 
+        color: '#FFFFFF', 
         fontWeight: '700',
         fontSize: 16,
     },
     buttonOutlineText: {
-        color: '#0782F9',
+        color: 'black',
         fontWeight: '700',
         fontSize: 16,
     },
+	icone:{
+		width: 250,
+		height: 250,
+		marginBottom: 50
+	}
 })
 
 
@@ -94,6 +103,11 @@ export default function Login() {
         <KeyboardAvoidingView
             style={styles.container}
             behavior="padding">
+				<View>
+					<Image style={styles.icone} source={require('../../../icone.png')}>
+
+					</Image>
+				</View>
 
             <View style={styles.inputContainer}>
                 <TextInput
@@ -112,18 +126,18 @@ export default function Login() {
                 >
                 </TextInput>
             </View>
-            <View styles={styles.buttonContainer}>
+            <View style={styles.buttonContainer}>
                 <TouchableOpacity
                     onPress={handleLogin}
                     style={styles.button}
                 >
-                    <Text styles={styles.buttonText}>Entre na sua conta</Text>
+                    <Text style={styles.buttonText}>Entre na sua conta</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={handleSignUp}
                     style={[styles.button, styles.buttonOutline]}
                 >
-                    <Text styles={styles.buttonOutlineText}>Registre-se agora!!</Text>
+                    <Text style={styles.buttonOutlineText}>Registre-se agora </Text>
                 </TouchableOpacity>
             </View>
         </KeyboardAvoidingView>
