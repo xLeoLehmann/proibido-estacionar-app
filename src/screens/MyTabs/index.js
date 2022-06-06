@@ -17,7 +17,7 @@ export default function MyTabs() {
         tabBarActiveTintColor: 'black',
         tabBarActiveBackgroundColor: '#daa520',
         tabBarInactiveTintColor:'white',
-        tabBarInactiveBackgroundColor: '#000080',
+        tabBarInactiveBackgroundColor: '#004AAD',
         tabBarHideOnKeyboard:true
       }}
     >
