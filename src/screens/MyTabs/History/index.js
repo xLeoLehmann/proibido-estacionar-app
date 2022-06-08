@@ -72,8 +72,6 @@ class History extends React.Component {
             });
         }
 
-        console.log('objs -', objs);
-
         this.setState({records: objs});
     }
 
@@ -107,7 +105,7 @@ class History extends React.Component {
                                                 <Text style={styles.recordText}>Data: {item.data}</Text>
                                                 <Text style={styles.recordText}>Local:</Text>
                                                 <View style={styles.recordInfoContainer}>
-                                                    <Text>{item.localInfo.logradouro}, {item.localInfo.number} - {item.localInfo.complemento}</Text>
+                                                    <Text>{item.localInfo.logradouro}, {item.localInfo.number}</Text>
                                                     <Text>{item.localInfo.bairro} / {item.localInfo.localidade} / {item.localInfo.uf}</Text>
                                                     <Text>{item.localInfo.cep}</Text>
                                                 </View>
