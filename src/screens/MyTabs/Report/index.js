@@ -145,6 +145,7 @@ export default function Report() {
     const save = async () => {
 
         const obj = {
+            data: new Date().toISOString(),
             uid : auth.currentUser.uid,
             localInfo : {
                 ...info,
@@ -175,7 +176,7 @@ export default function Report() {
     return (
         <KeyboardAvoidingView style={styles.container} behavior="height" enabled>
             <Text style={styles.title}>Reportar incidente</Text>
-            <ScrollView>
+            <ScrollView style={{minHeight:'89%'}}>
                 <View style={styles.fields}>
                     <View style={{width: '50%', marginRight: 10}}>
                             <Text>CEP</Text>
@@ -204,7 +205,6 @@ export default function Report() {
                                 keyboardType="numeric"
                                 placeholder="Digite o logradouro"
                                 value={info.logradouro}
-                                editable={!!info ? true : false}
                             />
                     </View>
                 </View>
@@ -301,7 +301,7 @@ export default function Report() {
                     </View>
                 </View>
             </ScrollView>
-            <View style={{width: '100%', paddingRight: 10, bottom:5, position:'absolute', left: '7%'}}>
+            <View style={{width: '100%', marginTop: 20}}>
                 <TouchableOpacity
                     onPress={save}
                     style={styles.button}
